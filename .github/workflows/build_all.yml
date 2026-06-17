@@ -8,5 +8,4 @@ jobs:
       - uses: subosito/flutter-action@v2
       - run: |
           rm -rf android ios
-          flutter create . --project-name=nexus_ui --platforms=android,ios
-          
+          flutter create . --project-name=nexus_ui --platforms=android --force
