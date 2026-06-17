@@ -8,12 +8,11 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - name: Force Update Android Project
+      - name: Master Clean and Recreate
         run: |
+          flutter clean
           rm -rf android
-          flutter create . --platforms=android --force
+          flutter create --platforms=android --project-name=nexus_frontend .
       - name: Build APK
         run: flutter build apk --debug
-
-
         
